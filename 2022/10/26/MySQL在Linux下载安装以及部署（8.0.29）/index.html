@@ -6,13 +6,24 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="MySQL官网下载   MySQL官网下载：https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;mysql&#x2F; 进入以后，默认页是MySQL的最新版本，如果要需要选择之前版本，就点击  ** **Looking for previous GA versions? Linux-Generic是通用版（我这里是64位的，所以选择的是x86,64-bit）     一、将下载好的压缩包丢到服">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2022/10/26/MySQL%E5%9C%A8Linux%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%83%A8%E7%BD%B2%EF%BC%888.0.29%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MySQL官网下载   MySQL官网下载：https:&#x2F;&#x2F;dev.mysql.com&#x2F;downloads&#x2F;mysql&#x2F; 进入以后，默认页是MySQL的最新版本，如果要需要选择之前版本，就点击  ** **Looking for previous GA versions? Linux-Generic是通用版（我这里是64位的，所以选择的是x86,64-bit）     一、将下载好的压缩包丢到服">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/pic/mysql1">
+<meta property="og:image" content="http://example.com/pic/mysql2">
+<meta property="og:image" content="http://example.com/pic/mysql3">
+<meta property="og:image" content="http://example.com/pic/mysql4">
+<meta property="og:image" content="http://example.com/pic/mysql5">
+<meta property="og:image" content="http://example.com/pic/mysql6">
+<meta property="article:published_time" content="2022-10-26T09:39:31.479Z">
+<meta property="article:modified_time" content="2022-10-26T09:39:16.788Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pic/mysql1">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,9 +80,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-MySQL在Linux下载安装以及部署（8.0.29）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-MySQL在Linux下载安装以及部署（8.0.29）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/10/26/MySQL%E5%9C%A8Linux%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%83%A8%E7%BD%B2%EF%BC%888.0.29%EF%BC%89/" class="article-date">
   <time class="dt-published" datetime="2022-10-26T09:39:31.479Z" itemprop="datePublished">2022-10-26</time>
@@ -191,147 +200,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-使用源码安装nginx" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/10/26/%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85nginx/" class="article-date">
-  <time class="dt-published" datetime="2022-10-26T09:12:36.620Z" itemprop="datePublished">2022-10-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux安装部署Nginx"><a href="#Linux安装部署Nginx" class="headerlink" title="Linux安装部署Nginx"></a>Linux安装部署Nginx</h1><br>
-1、使用wget下载nginx源码包
+  
+    <a href="/2022/10/26/%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85nginx/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.14.1.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>2、下载完成后，将其解压</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.14.1.tar.gz </span><br></pre></td></tr></table></figure>
-
-<p>3、开始安装步骤</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.14.1/</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure  --with-http_gzip_static_module --prefix=/usr/local/nginx</span><br></pre></td></tr></table></figure>
-
-<p>可通过下面代码验证上一行代码是否成功运行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $?</span><br></pre></td></tr></table></figure>
-
-<p>返回值表示0 表示没有错误 ，若非0表示又错误</p>
-<p>4、编译</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<br/>
-
-<p><img src="/pic/28e3cdc257072219b60dc93127cf9d78.png" alt="截图"></p>
-<br/>
-
-<p>出现这种错误情况</p>
-<br/>
-
-<br/>
-
-<p>解决方法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim src/os/unix/ngx_user.c</span><br></pre></td></tr></table></figure>
-
-<p>将红色框中的代码注释掉</p>
-<p><img src="/pic/afb44f639073f9979bedb1841e5be631.png" alt="截图"></p>
-<br/>
-
-<p>再次执行make</p>
-<p>还是出现错误</p>
-<p><img src="/pic/6320b447666edaf0b7b2ffb51ea995f7.png" alt="截图"></p>
-<br/>
-
-<p>编辑： vim objs&#x2F;Makefile</p>
-<p>去掉：-werror</p>
-<p>再次执行：make</p>
-<br/>
-
-<p>4、安装软件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>5、查看端口</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -plant | grep 80</span><br></pre></td></tr></table></figure>
-
-<p>6、启动nginx服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/26/%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85nginx/" data-id="cl9pf4qnb00000gwgbk1t1if1" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/10/21/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-10-21T02:58:21.943Z" itemprop="datePublished">2022-10-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/10/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/21/hello-world/" data-id="cl9pf099x00008wwgbjkndxqw" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
