@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="基于Red Hat8.5环境下的Apache服务器的安装与配置1rpm -qa | grep httpd 如图所示表示已经下载了httpd安装包 若没有下载，则执行一下代码 1yum install -y httpd   安装完成后，再用rpm -qa |grep httpd,查看apache是否已安装成功 然后启动apache，命令用：systemctl start httpd  设置apac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基于Red Hat8.5环境下的Apache服务器的安装与配置1rpm -qa | grep httpd 如图所示表示已经下载了httpd安装包 若没有下载，则执行一下代码 1yum install -y httpd   安装完成后，再用rpm -qa |grep httpd,查看apache是否已安装成功 然后启动apache，命令用：systemctl start httpd  设置apac">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/pic/Apache.png">
+<meta property="article:published_time" content="2022-10-26T09:46:03.625Z">
+<meta property="article:modified_time" content="2022-10-26T09:48:03.399Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/pic/Apache.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Apache服务器的安装与配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time class="dt-published" datetime="2022-10-26T09:46:03.625Z" itemprop="datePublished">2022-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a name="Uezi0"></a></p>
+<h1 id="基于Red-Hat8-5环境下的Apache服务器的安装与配置"><a href="#基于Red-Hat8-5环境下的Apache服务器的安装与配置" class="headerlink" title="基于Red Hat8.5环境下的Apache服务器的安装与配置"></a>基于Red Hat8.5环境下的Apache服务器的安装与配置</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep httpd</span><br></pre></td></tr></table></figure>
+<p><img src="/pic/Apache.png" alt="image.png"><br />如图所示表示已经下载了httpd安装包</p>
+<p>若没有下载，则执行一下代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y httpd</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装完成后，再用rpm -qa |grep httpd,查看apache是否已安装成功</li>
+<li>然后启动apache，命令用：systemctl start httpd </li>
+<li>设置apache开启自启，命令用：systemctl enable httpd </li>
+<li>查看apache服务是否起来，命令用：systemctl status httpd</li>
+</ul>
+<p><a name="WDXbx"></a></p>
+<h2 id="放行防火墙"><a href="#放行防火墙" class="headerlink" title="放行防火墙"></a>放行防火墙</h2><blockquote>
+<p>防火墙放行http，放行端口</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --<span class="built_in">list</span>-all  <span class="comment">//查看防火墙详细信息</span></span><br><span class="line">firewall-cmd --reload   <span class="comment">//重启防火墙</span></span><br><span class="line">firewall-cmd --add-service=http <span class="comment">//放行http服务</span></span><br><span class="line">firewall-cmd --add-service=http --permanent <span class="comment">//永久放行http服务放行</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+</blockquote>
+<p><a name="mJjep"></a></p>
+<h2 id="更改端口"><a href="#更改端口" class="headerlink" title="更改端口"></a>更改端口</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf   <span class="comment">//编辑配置文件</span></span><br><span class="line">Listen <span class="number">80</span> --&gt; Listen <span class="number">82</span>  <span class="comment">//将80端口改到82</span></span><br><span class="line">systemctl restart httpd  <span class="comment">//重启HTTPD服务器</span></span><br></pre></td></tr></table></figure>
+
+<p><a name="e2VrZ"></a></p>
+<h2 id="更改文件存储路径"><a href="#更改文件存储路径" class="headerlink" title="更改文件存储路径"></a>更改文件存储路径</h2><p>更改路径 ： &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">更改：</span><br><span class="line">DocumentRoot <span class="string">&quot;/var/www/html&quot;</span> --&gt;  DocumentRoot <span class="string">&quot;/web&quot;</span>  <span class="comment">//更改文件存储路径为/web</span></span><br><span class="line">Directory <span class="string">&quot;/var/www/html&quot;</span>  --&gt; Directory <span class="string">&quot;/web&quot;</span></span><br><span class="line">更改后需重启http服务</span><br></pre></td></tr></table></figure>
+
+
+
+<p><a name="nQvUD"></a></p>
+<h2 id="更改对应的标签"><a href="#更改对应的标签" class="headerlink" title="更改对应的标签"></a>更改对应的标签</h2><p> http对应的标签是httpd_sys_content_t<br />lg：  每个文件和文件类型只对应唯一的标签   监控端口<br />ls -Z   &#x2F;&#x2F;查看标签<br />ls -ldZ &#x2F;&#x2F;查看文件夹标签</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">semanage fcontext -a -t <span class="type">httpd_sys_content_t</span> index2.html   <span class="comment">//更改标签  -a 是添加 -t 是添加标签</span></span><br><span class="line">restorecon -Rv <span class="comment">//刷新所有文件</span></span><br><span class="line">restorecon -Rv index2.html <span class="comment">//刷新index2.html文件</span></span><br><span class="line">semanage fcontext -m -t <span class="type">httpd_sys_content_t</span> index2.html   <span class="comment">//更改标签 -m 是modify 的意思</span></span><br><span class="line">semanage fcontext -a -t <span class="type">httpd_sys_content_t</span> <span class="string">&#x27;/web(/.*)?&#x27;</span> <span class="comment">//对文件下的所有文件更改标签    更改文件夹的标签，以防刷新是被文件夹标签干扰</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p><a name="ZOmbV"></a></p>
+<h2 id="放行SELinux监控端口"><a href="#放行SELinux监控端口" class="headerlink" title="放行SELinux监控端口"></a>放行SELinux监控端口</h2><p>SELinux配置文件： &#x2F;etc&#x2F;selinux&#x2F;config<br />SELinux中的配置选项：<br />	enforcing &#x2F;&#x2F;工作，开启<br />	permissive &#x2F;&#x2F;警告但放行<br />	disabled &#x2F;&#x2F;完全放行</p>
+<p>getenforce &#x2F;&#x2F;查看SELinux防火墙状态<br />setenforce 0 &#x2F;&#x2F;设置防火墙状态为0（临时关掉）不需要重启selinux<br />setenforce 1 &#x2F;&#x2F;开启防火墙</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">semanage port -l | grep http  <span class="comment">//过滤http</span></span><br><span class="line">semanage port -a -t <span class="type">http_port_t</span> -p tcp <span class="number">82</span> <span class="comment">//不需要刷新和重启  还需放行防火墙</span></span><br><span class="line">firewall-cmd --add-port=<span class="number">82</span>/tcp <span class="comment">//放行TCP的82端口</span></span><br><span class="line">firewall-cmd --add-port=<span class="number">82</span>/tcp --permanent <span class="comment">//永久放行tcpd82端口</span></span><br><span class="line">systemctl restart httpd <span class="comment">//重启httpd服务</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" data-id="cl9pgbr9f0000ucwgfqv4e57h" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/10/26/%E9%98%B2%E7%81%AB%E5%A2%99/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/10/26/MySQL%E5%9C%A8Linux%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%83%A8%E7%BD%B2%EF%BC%888.0.29%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/10/26/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/26/%E9%98%B2%E7%81%AB%E5%A2%99/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/26/MySQL%E5%9C%A8Linux%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%83%A8%E7%BD%B2%EF%BC%888.0.29%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/26/%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85nginx/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
