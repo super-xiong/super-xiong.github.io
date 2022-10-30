@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>雄的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="雄的博客">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="雄的博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="LiXiong">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="雄的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -56,6 +56,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+	        
+				<li><a href="/archives/index.html">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -113,6 +115,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -130,12 +134,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,10 +161,27 @@
     <article id="post-网络配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/26/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/">网络配置</a>
+    </h1>
+  
+
+        
+        <a href="/2022/10/26/%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2022-10-26T09:46:03.638Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-26</time>
+</a>
+
+
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h1><p>ip addr &#x2F; ifconfig &#x2F;&#x2F;查看IP信息<br />nmcli connection show &#x2F;&#x2F;查看网卡信息<br />nmcli connection up ens160 &#x2F;&#x2F; 启用<strong>网卡<br />nmcli connection down ens160 &#x2F;&#x2F;禁用</strong>网卡<br />nmcli connection modify  &#x2F;&#x2F;修改网卡信息<br />nmcli connection modify ens33 ipv4.addresses 192.168.200.132&#x2F;24 ipv4.gateway 192.168.200.254  &#x2F;&#x2F;修改IP地址和网关</p>
-
+        <p>ip addr &#x2F; ifconfig &#x2F;&#x2F;查看IP信息<br />nmcli connection show &#x2F;&#x2F;查看网卡信息<br />nmcli connection up ens160 &#x2F;&#x2F; 启用<strong>网卡
+        
       
 
       
@@ -203,11 +226,27 @@
     <article id="post-防火墙" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/26/%E9%98%B2%E7%81%AB%E5%A2%99/">防火墙配置</a>
+    </h1>
+  
+
+        
+        <a href="/2022/10/26/%E9%98%B2%E7%81%AB%E5%A2%99/" class="archive-article-date">
+  	<time datetime="2022-10-26T09:46:03.631Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-26</time>
+</a>
+
+
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="防火墙配置"><a href="#防火墙配置" class="headerlink" title="防火墙配置"></a>防火墙配置</h1><p>yum -y install firewall-config &#x2F;&#x2F;安装防火墙图形化管理<br />firewall-config  &#x2F;&#x2F;图形化防火墙管理<br />firewall-cmd –list-all  &#x2F;&#x2F;查看防火墙详细信息<br />firewall-cmd –reload &#x2F;&#x2F;重启防火墙<br />firewall-cmd –add-service&#x3D;http –permanent &#x2F;&#x2F;永久设置（否者开机放行就没了）  设置后需重启防火墙<br /><em>一般不要轻易重启防火墙</em> &#x2F;&#x2F;仅限制于实验环节使用<br />firewall-cmd –remove-service&#x3D;ssh  &#x2F;&#x2F;删除ssh服务放行<br />firewall-cmd –remove-service&#x3D;http –permanent &#x2F;&#x2F;永久删除ssh服务放行</p>
-<p>一般放行防火墙示例<br />firewall-cmd –add-service&#x3D;ssh <br />firewall-cmd –add-service&#x3D;ssh –permanent </p>
-
+        <p>yum -y install firewall-config &#x2F;&#x2F;安装防火墙图形化管理<br />firewall-config  &#x2F;&#x2F;图形化防火墙管理<br />firewall-cmd –list-all  &#x2F;&#x2F;查看防火墙详细信息<br />firewall-cmd –reload &#x2F;&#x2F;重启防火墙<br />firewall-cmd –add-service&#x3D;http –permanent &#x2F;&#x2F;永久设置（否者开机放行就没了）  设置后需重启防火墙<br /><em>一般不要轻易重启防火墙</em> &#x2F;&#x2F;仅限制于实验环节使用<br />firewall-cmd –remove-service&#x3D;ssh  &#x2F;&#x2F;删除ssh服务放行<br />firewall-cmd –remove-service&#x3D;http –permanent &#x2F;&#x2F;永久删除ssh服务放行</p>
+        
       
 
       
@@ -252,46 +291,29 @@
     <article id="post-Apache服务器的安装与配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/">基于Red Hat8.5环境下的Apache服务器的安装与配置</a>
+    </h1>
+  
+
+        
+        <a href="/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2022-10-26T09:46:03.625Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-26</time>
+</a>
+
+
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <p><a name="Uezi0"></a></p>
-<h1 id="基于Red-Hat8-5环境下的Apache服务器的安装与配置"><a href="#基于Red-Hat8-5环境下的Apache服务器的安装与配置" class="headerlink" title="基于Red Hat8.5环境下的Apache服务器的安装与配置"></a>基于Red Hat8.5环境下的Apache服务器的安装与配置</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep httpd</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep httpd</span><br></pre></td></tr></table></figure>
 <p><img src="/pic/Apache.png" alt="image.png"><br />如图所示表示已经下载了httpd安装包</p>
-<p>若没有下载，则执行一下代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y httpd</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装完成后，再用rpm -qa |grep httpd,查看apache是否已安装成功</li>
-<li>然后启动apache，命令用：systemctl start httpd </li>
-<li>设置apache开启自启，命令用：systemctl enable httpd </li>
-<li>查看apache服务是否起来，命令用：systemctl status httpd</li>
-</ul>
-<p><a name="WDXbx"></a></p>
-<h2 id="放行防火墙"><a href="#放行防火墙" class="headerlink" title="放行防火墙"></a>放行防火墙</h2><blockquote>
-<p>防火墙放行http，放行端口</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --<span class="built_in">list</span>-all  <span class="comment">//查看防火墙详细信息</span></span><br><span class="line">firewall-cmd --reload   <span class="comment">//重启防火墙</span></span><br><span class="line">firewall-cmd --add-service=http <span class="comment">//放行http服务</span></span><br><span class="line">firewall-cmd --add-service=http --permanent <span class="comment">//永久放行http服务放行</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-</blockquote>
-<p><a name="mJjep"></a></p>
-<h2 id="更改端口"><a href="#更改端口" class="headerlink" title="更改端口"></a>更改端口</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf   <span class="comment">//编辑配置文件</span></span><br><span class="line">Listen <span class="number">80</span> --&gt; Listen <span class="number">82</span>  <span class="comment">//将80端口改到82</span></span><br><span class="line">systemctl restart httpd  <span class="comment">//重启HTTPD服务器</span></span><br></pre></td></tr></table></figure>
-
-<p><a name="e2VrZ"></a></p>
-<h2 id="更改文件存储路径"><a href="#更改文件存储路径" class="headerlink" title="更改文件存储路径"></a>更改文件存储路径</h2><p>更改路径 ： &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">更改：</span><br><span class="line">DocumentRoot <span class="string">&quot;/var/www/html&quot;</span> --&gt;  DocumentRoot <span class="string">&quot;/web&quot;</span>  <span class="comment">//更改文件存储路径为/web</span></span><br><span class="line">Directory <span class="string">&quot;/var/www/html&quot;</span>  --&gt; Directory <span class="string">&quot;/web&quot;</span></span><br><span class="line">更改后需重启http服务</span><br></pre></td></tr></table></figure>
-
-
-
-<p><a name="nQvUD"></a></p>
-<h2 id="更改对应的标签"><a href="#更改对应的标签" class="headerlink" title="更改对应的标签"></a>更改对应的标签</h2><p> http对应的标签是httpd_sys_content_t<br />lg：  每个文件和文件类型只对应唯一的标签   监控端口<br />ls -Z   &#x2F;&#x2F;查看标签<br />ls -ldZ &#x2F;&#x2F;查看文件夹标签</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">semanage fcontext -a -t <span class="type">httpd_sys_content_t</span> index2.html   <span class="comment">//更改标签  -a 是添加 -t 是添加标签</span></span><br><span class="line">restorecon -Rv <span class="comment">//刷新所有文件</span></span><br><span class="line">restorecon -Rv index2.html <span class="comment">//刷新index2.html文件</span></span><br><span class="line">semanage fcontext -m -t <span class="type">httpd_sys_content_t</span> index2.html   <span class="comment">//更改标签 -m 是modify 的意思</span></span><br><span class="line">semanage fcontext -a -t <span class="type">httpd_sys_content_t</span> <span class="string">&#x27;/web(/.*)?&#x27;</span> <span class="comment">//对文件下的所有文件更改标签    更改文件夹的标签，以防刷新是被文件夹标签干扰</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<p><a name="ZOmbV"></a></p>
-<h2 id="放行SELinux监控端口"><a href="#放行SELinux监控端口" class="headerlink" title="放行SELinux监控端口"></a>放行SELinux监控端口</h2><p>SELinux配置文件： &#x2F;etc&#x2F;selinux&#x2F;config<br />SELinux中的配置选项：<br />	enforcing &#x2F;&#x2F;工作，开启<br />	permissive &#x2F;&#x2F;警告但放行<br />	disabled &#x2F;&#x2F;完全放行</p>
-<p>getenforce &#x2F;&#x2F;查看SELinux防火墙状态<br />setenforce 0 &#x2F;&#x2F;设置防火墙状态为0（临时关掉）不需要重启selinux<br />setenforce 1 &#x2F;&#x2F;开启防火墙</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">semanage port -l | grep http  <span class="comment">//过滤http</span></span><br><span class="line">semanage port -a -t <span class="type">http_port_t</span> -p tcp <span class="number">82</span> <span class="comment">//不需要刷新和重启  还需放行防火墙</span></span><br><span class="line">firewall-cmd --add-port=<span class="number">82</span>/tcp <span class="comment">//放行TCP的82端口</span></span><br><span class="line">firewall-cmd --add-port=<span class="number">82</span>/tcp --permanent <span class="comment">//永久放行tcpd82端口</span></span><br><span class="line">systemctl restart httpd <span class="comment">//重启httpd服务</span></span><br></pre></td></tr></table></figure>
-
+        
       
 
       
@@ -336,106 +358,33 @@
     <article id="post-MySQL在Linux下载安装以及部署（8.0.29）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/26/MySQL%E5%9C%A8Linux%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%83%A8%E7%BD%B2%EF%BC%888.0.29%EF%BC%89/">MySQL官网下载</a>
+    </h1>
+  
+
+        
+        <a href="/2022/10/26/MySQL%E5%9C%A8Linux%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%83%A8%E7%BD%B2%EF%BC%888.0.29%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2022-10-26T09:39:31.479Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-26</time>
+</a>
+
+
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <p><a name="Uezi0"></a></p>
-<h1 id="MySQL官网下载"><a href="#MySQL官网下载" class="headerlink" title="MySQL官网下载"></a>MySQL官网下载</h1><blockquote>
+<blockquote>
 </blockquote>
 <ul>
 <li>MySQL官网下载：<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></li>
 <li>进入以后，默认页是MySQL的最新版本，如果要需要选择之前版本，就点击  ** **<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/5.7.html">Looking for previous GA versions?</a></li>
-<li>Linux-Generic是通用版（我这里是64位的，所以选择的是x86,64-bit）<br><a name="WDXbx"></a></li>
-</ul>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/pic/mysql1.png" alt="下载MySQL"></h2><blockquote>
-</blockquote>
-<p><img src="/pic/mysql2.png" alt="选择版本"><br><a name="kpfOc"></a></p>
-<h2 id="一、将下载好的压缩包丢到服务器上任意一个你能找到的地方"><a href="#一、将下载好的压缩包丢到服务器上任意一个你能找到的地方" class="headerlink" title="一、将下载好的压缩包丢到服务器上任意一个你能找到的地方"></a>一、将下载好的压缩包丢到服务器上任意一个你能找到的地方</h2><p><a name="gSABb"></a></p>
-<h2 id="二、在-x2F-usr路径下创建一个文件夹mysql"><a href="#二、在-x2F-usr路径下创建一个文件夹mysql" class="headerlink" title="二、在&#x2F;usr路径下创建一个文件夹mysql"></a>二、在&#x2F;usr路径下创建一个文件夹mysql</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/mysql</span><br></pre></td></tr></table></figure>
-<p><a name="kTkyE"></a></p>
-<h2 id="三、找到之前丢服务器上的压缩包，通过命令将其解压到-x2F-usr-x2F-mysql-目录下"><a href="#三、找到之前丢服务器上的压缩包，通过命令将其解压到-x2F-usr-x2F-mysql-目录下" class="headerlink" title="三、找到之前丢服务器上的压缩包，通过命令将其解压到 &#x2F;usr&#x2F;mysql 目录下"></a>三、找到之前丢服务器上的压缩包，通过命令将其解压到 &#x2F;usr&#x2F;mysql 目录下</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xf mysql<span class="number">-8.0</span><span class="number">.29</span>-linux-glibc2<span class="number">.12</span>-X86_64.tar.xz -C /usr/mysql/</span><br></pre></td></tr></table></figure>
-
-<p><a name="XJPSc"></a></p>
-<h2 id="四、进入到-x2F-usr-x2F-mysql-目录下，并修改文件名字"><a href="#四、进入到-x2F-usr-x2F-mysql-目录下，并修改文件名字" class="headerlink" title="四、进入到&#x2F;usr&#x2F;mysql 目录下，并修改文件名字"></a>四、进入到&#x2F;usr&#x2F;mysql 目录下，并修改文件名字</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/mysql</span><br><span class="line">mv mysql<span class="number">-8.0</span><span class="number">.29</span>-linux-glibc2<span class="number">.12</span>-X86_64 mysql<span class="number">-8.0</span><span class="number">.29</span></span><br></pre></td></tr></table></figure>
-
-<p><a name="Pgo3G"></a></p>
-<h2 id="五、检查用户组、用户"><a href="#五、检查用户组、用户" class="headerlink" title="五、检查用户组、用户"></a>五、检查用户组、用户</h2><p>1.查看所有用户组信息是否存在mysql组，不存在则创建，存在则直接新建用户<br />2.查看是否存在mysql用户</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/group | grep mysql</span><br><span class="line">cat /etc/passwd | grep mysql</span><br></pre></td></tr></table></figure>
-
-
-<p><a name="TlEni"></a></p>
-<h2 id="六、创建用户组、用户"><a href="#六、创建用户组、用户" class="headerlink" title="六、创建用户组、用户"></a>六、创建用户组、用户</h2><p>1.创建用户组<br />2.创建用户</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql</span><br><span class="line">useradd -r -g mysql mysql</span><br></pre></td></tr></table></figure>
-
-
-<p><a name="z5ffb"></a></p>
-<h2 id="七、创建MySQL的data数据目录"><a href="#七、创建MySQL的data数据目录" class="headerlink" title="七、创建MySQL的data数据目录"></a>七、创建MySQL的data数据目录</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /usr/mysql/mysq<span class="number">-8.0</span><span class="number">.29</span>/data</span><br></pre></td></tr></table></figure>
-
-
-<p><a name="LzAJJ"></a></p>
-<h2 id="八、授权目录、用户"><a href="#八、授权目录、用户" class="headerlink" title="八、授权目录、用户"></a>八、授权目录、用户</h2><p><a name="nbOKu"></a></p>
-<h3 id="将-x2F-usr-x2F-local-x2F-mysql-x2F-mysql-8-0-29-的所有者及所属组改位mysql"><a href="#将-x2F-usr-x2F-local-x2F-mysql-x2F-mysql-8-0-29-的所有者及所属组改位mysql" class="headerlink" title="将 &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;mysql-8.0.29 的所有者及所属组改位mysql"></a>将 &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;mysql-8.0.29 的所有者及所属组改位mysql</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span> </span><br><span class="line">chown -R mysql:mysql ./</span><br></pre></td></tr></table></figure>
-
-<p><a name="ajc0Q"></a></p>
-<h2 id="九、修改my-cnf配置"><a href="#九、修改my-cnf配置" class="headerlink" title="九、修改my.cnf配置"></a>九、修改my.cnf配置</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf</span><br></pre></td></tr></table></figure>
-<p><a name="RZpFK"></a></p>
-<h3 id="按-i-键进入-my-cnf-的编辑模式"><a href="#按-i-键进入-my-cnf-的编辑模式" class="headerlink" title="按 i 键进入 my.cnf 的编辑模式"></a>按 i 键进入 my.cnf 的编辑模式</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">datadir=/usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span>/data</span><br><span class="line">socket=/tmp/mysql.sock</span><br><span class="line"><span class="meta">#character config</span></span><br><span class="line">symbolic-links=<span class="number">0</span></span><br><span class="line"> </span><br><span class="line">character_set_server=utf8mb4</span><br><span class="line">bind-address=<span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br><span class="line">port=<span class="number">3306</span></span><br><span class="line">user=mysql</span><br><span class="line">basedir=/usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span></span><br><span class="line"><span class="built_in">log</span>-error=/usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span>/data/mysql-err.<span class="built_in">log</span></span><br><span class="line">pid-file=/usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span>/data/mysql.pid</span><br></pre></td></tr></table></figure>
-
-<p><a name="koQTK"></a></p>
-<h2 id="十、安装-libaio"><a href="#十、安装-libaio" class="headerlink" title="十、安装 libaio"></a>十、安装 libaio</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y libaio</span><br></pre></td></tr></table></figure>
-
-<p><a name="QZoPC"></a></p>
-<h2 id="十一、初始化数据库"><a href="#十一、初始化数据库" class="headerlink" title="十一、初始化数据库"></a>十一、初始化数据库</h2><p><a name="exFWd"></a></p>
-<h3 id="进入-bin-目录"><a href="#进入-bin-目录" class="headerlink" title="进入 bin 目录"></a>进入 bin 目录</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span>/bin</span><br></pre></td></tr></table></figure>
-
-<p><a name="NRIXu"></a></p>
-<h3 id="初始化数据库"><a href="#初始化数据库" class="headerlink" title="初始化数据库"></a>初始化数据库</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mysqld --initialize --user=mysql --basedir=/usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span> --datadir=/usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span>/data</span><br></pre></td></tr></table></figure>
-<p><a name="LBdFy"></a></p>
-<h4 id="命令执行完后，命令最后会得到一个数据库初始密码，一定要记住这个密码！！！"><a href="#命令执行完后，命令最后会得到一个数据库初始密码，一定要记住这个密码！！！" class="headerlink" title="命令执行完后，命令最后会得到一个数据库初始密码，一定要记住这个密码！！！"></a>命令执行完后，命令最后会得到一个数据库初始密码，一定要记住这个密码！！！</h4><p><a name="ZAkdm"></a></p>
-<h4 id="如果按照该教程安装的话，也可以从mysql-err-log日志文件中查看初始密码，这个路径是在配置文件中配置的-log-error"><a href="#如果按照该教程安装的话，也可以从mysql-err-log日志文件中查看初始密码，这个路径是在配置文件中配置的-log-error" class="headerlink" title="如果按照该教程安装的话，也可以从mysql-err.log日志文件中查看初始密码，这个路径是在配置文件中配置的 log-error"></a>如果按照该教程安装的话，也可以从mysql-err.log日志文件中查看初始密码，这个路径是在配置文件中配置的 log-error</h4><p><a name="il76S"></a></p>
-<h4 id="x2F-usr-x2F-mysql-x2F-mysql-5-7-27-x2F-data-x2F-mysql-err-log"><a href="#x2F-usr-x2F-mysql-x2F-mysql-5-7-27-x2F-data-x2F-mysql-err-log" class="headerlink" title="&#x2F;usr&#x2F;mysql&#x2F;mysql-5.7.27&#x2F;data&#x2F;mysql-err.log"></a>&#x2F;usr&#x2F;mysql&#x2F;mysql-5.7.27&#x2F;data&#x2F;mysql-err.log</h4><p><a name="AnAN0"></a></p>
-<h4 id="日志中，“root-localhost-”后面紧跟的部分就是初始密码，例如："><a href="#日志中，“root-localhost-”后面紧跟的部分就是初始密码，例如：" class="headerlink" title="日志中，“root@localhost:”后面紧跟的部分就是初始密码，例如："></a>日志中，“root@localhost:”后面紧跟的部分就是初始密码，例如：</h4><p><a name="zl9VH"></a></p>
-<h4 id="A-temporary-password-is-generated-for-root-localhost-q-ZWt-o-V1oL"><a href="#A-temporary-password-is-generated-for-root-localhost-q-ZWt-o-V1oL" class="headerlink" title="A temporary password is generated for root@localhost: q?ZWt,o.V1oL"></a>A temporary password is generated for root@localhost: q?ZWt,o.V1oL</h4><p><a name="UJfZu"></a></p>
-<h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><p><a name="s0F9T"></a></p>
-<h2 id="十二、将启动脚本放到初始化目录"><a href="#十二、将启动脚本放到初始化目录" class="headerlink" title="十二、将启动脚本放到初始化目录"></a>十二、将启动脚本放到初始化目录</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span>/support-files/mysql.server /etc/init.d/mysql</span><br></pre></td></tr></table></figure>
-<p><a name="GUaJP"></a></p>
-<h2 id="十三、启动MySQL服务"><a href="#十三、启动MySQL服务" class="headerlink" title="十三、启动MySQL服务"></a><br />十三、启动MySQL服务</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure>
-<p><a name="ADLpr"></a></p>
-<h4 id="在启动中，可能会遇到报错提示缺少libtinfo-so-5包"><a href="#在启动中，可能会遇到报错提示缺少libtinfo-so-5包" class="headerlink" title="在启动中，可能会遇到报错提示缺少libtinfo.so.5包"></a>在启动中，可能会遇到报错提示缺少libtinfo.so.5包</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos8 local]<span class="meta"># mysql</span></span><br><span class="line">mysql: error <span class="keyword">while</span> loading shared libraries: libtinfo.so<span class="number">.5</span>: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
-<p><a name="XFmEZ"></a></p>
-<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>进入数据库对应的压缩文件，创建一个软连接即可</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@centos8 local]<span class="meta"># cd /usr/mysql/mysql-8.0.29/bin/  #先进入该命令的对应目录</span></span><br><span class="line">[root@centos8 bin]<span class="meta"># ldd mysql  #查看依赖库文件</span></span><br><span class="line">	linux-vdso.so<span class="number">.1</span> (<span class="number">0x00007ffc10ff7000</span>)</span><br><span class="line">	libpthread.so<span class="number">.0</span> =&gt; /lib64/libpthread.so<span class="number">.0</span> (<span class="number">0x00007f09dbfec000</span>)</span><br><span class="line">	librt.so<span class="number">.1</span> =&gt; /lib64/librt.so<span class="number">.1</span> (<span class="number">0x00007f09dbde3000</span>)</span><br><span class="line">	libdl.so<span class="number">.2</span> =&gt; /lib64/libdl.so<span class="number">.2</span> (<span class="number">0x00007f09dbbdf000</span>)</span><br><span class="line">	libtinfo.so<span class="number">.5</span> =&gt; not found      <span class="comment">//表示缺少libtinfo.so.5包</span></span><br><span class="line">	libstdc++.so<span class="number">.6</span> =&gt; /lib64/libstdc++.so<span class="number">.6</span> (<span class="number">0x00007f09db84a000</span>)</span><br><span class="line">	libm.so<span class="number">.6</span> =&gt; /lib64/libm.so<span class="number">.6</span> (<span class="number">0x00007f09db4c8000</span>)</span><br><span class="line">	libc.so<span class="number">.6</span> =&gt; /lib64/libc.so<span class="number">.6</span> (<span class="number">0x00007f09db106000</span>)</span><br><span class="line">	/lib64/ld-linux-x86<span class="number">-64.</span>so<span class="number">.2</span> (<span class="number">0x00007f09dc8c3000</span>)</span><br><span class="line">	libgcc_s.so<span class="number">.1</span> =&gt; /lib64/libgcc_s.so<span class="number">.1</span> (<span class="number">0x00007f09daeee000</span>)</span><br></pre></td></tr></table></figure>
-<p><a name="E6mdz"></a></p>
-<h4 id="在-x2F-usr-x2F-mysql-x2F-mysql-8-0-29-x2F-bin-目录下"><a href="#在-x2F-usr-x2F-mysql-x2F-mysql-8-0-29-x2F-bin-目录下" class="headerlink" title="在 &#x2F;usr&#x2F;mysql&#x2F;mysql-8.0.29&#x2F;bin 目录下"></a>在 &#x2F;usr&#x2F;mysql&#x2F;mysql-8.0.29&#x2F;bin 目录下</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ln-s /usr/lib64/libtinfo.so<span class="number">.6</span><span class="number">.1</span> /usr/lib64/libtinfo.so<span class="number">.5</span></span><br></pre></td></tr></table></figure>
-<p><a name="rBpdi"></a></p>
-<h2 id="-2"><a href="#-2" class="headerlink" title=""></a></h2><p><a name="cJBVq"></a></p>
-<h2 id="十四、配置软连接"><a href="#十四、配置软连接" class="headerlink" title="十四、配置软连接"></a>十四、配置软连接</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span>/bin/mysql /usr/bin</span><br></pre></td></tr></table></figure>
-
-<p><a name="wRJXl"></a></p>
-<h2 id="十五、修改MySQL初始密码"><a href="#十五、修改MySQL初始密码" class="headerlink" title="十五、修改MySQL初始密码"></a>十五、修改MySQL初始密码</h2><p><a name="SCeEV"></a></p>
-<h3 id="（1）若知道密码"><a href="#（1）若知道密码" class="headerlink" title="（1）若知道密码"></a>（1）若知道密码</h3><p>进入  &#x2F;usr&#x2F;mysql&#x2F;mysql-8.0.29&#x2F;bin&#x2F; 目录下</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/mysql/mysql<span class="number">-8.0</span><span class="number">.29</span>/bin/ </span><br><span class="line">./mysql -uroot -p</span><br></pre></td></tr></table></figure>
-<p>然后输入初始化密码登录，登录成功后修改密码，修改完成并刷新</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; alter user <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span>identified by <span class="string">&#x27;密码&#x27;</span>;</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
-
-<p><a name="YkIQA"></a></p>
-<h3 id="3-若不知道密码"><a href="#3-若不知道密码" class="headerlink" title="(3)若不知道密码"></a>(3)若不知道密码</h3><p>1.编辑 &#x2F;etc&#x2F;my.cnf 文件，在[mysqld]标签下添加 skip-grent-talbes<br /><img src="/pic/mysql3.png" alt="不知道密码"><br />2.重启MySQL服务器，让文件生效</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
-<p>3.进入数据库，此时进入数据库不用输入密码（免密码登录）</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
-<p>4.将数据库密码设置位空</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; USE mysql;</span><br><span class="line">mysql&gt; UPDATE user SET AUTHENTICATION_STRING = <span class="string">&#x27;&#x27; WHERE user = &#x27;</span>root<span class="number">&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<p><img src="/pic/mysql4.png" alt="image.png"><br />5.exit;退出数据库后重新编辑&#x2F;etc&#x2F;my.cnf文件，将所增加的 skip-grent-talbes 删除或注释，保存并重启mysqld<br /><img src="/pic/mysql5.png" alt="image.png"><br />重启mysql服务</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql restart</span><br></pre></td></tr></table></figure>
-<p><img src="/pic/mysql6.png" alt="image.png"><br />6.可免密码登录数据库</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; alter user<span class="number">&#x27;</span>root<span class="number">&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> identified by <span class="string">&#x27;密码&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<p>若出现报错：ERROR 1396 (HY000): Operation ALTER USER failed for ‘root‘@’localhost’</p>
-<p>因为自身所使用的数据库用户所对应的host可能不一致导致，将localhost改为%并刷新权限即可实现免密登录</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select user,host from user where user=<span class="string">&#x27;root&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<p>再设置密码即可</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; alter user<span class="number">&#x27;</span>root<span class="number">&#x27;</span>@<span class="string">&#x27;%&#x27;</span> identified by <span class="string">&#x27;密码&#x27;</span>;</span><br><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
-
-<p>即可完成MySQL数据库配置</p>
-
+<li>Linux-Generic是通用版（我这里是64位的，所以选择的是x86,64-bit）
+        
       
 
       
@@ -480,66 +429,30 @@
     <article id="post-使用源码安装nginx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/26/%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85nginx/">Linux安装部署Nginx</a>
+    </h1>
+  
+
+        
+        <a href="/2022/10/26/%E4%BD%BF%E7%94%A8%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85nginx/" class="archive-article-date">
+  	<time datetime="2022-10-26T09:12:36.620Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-26</time>
+</a>
+
+
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Linux安装部署Nginx"><a href="#Linux安装部署Nginx" class="headerlink" title="Linux安装部署Nginx"></a>Linux安装部署Nginx</h1><br>
+        <br>
 1、使用wget下载nginx源码包
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.14.1.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>2、下载完成后，将其解压</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.14.1.tar.gz </span><br></pre></td></tr></table></figure>
-
-<p>3、开始安装步骤</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.14.1/</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure  --with-http_gzip_static_module --prefix=/usr/local/nginx</span><br></pre></td></tr></table></figure>
-
-<p>可通过下面代码验证上一行代码是否成功运行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $?</span><br></pre></td></tr></table></figure>
-
-<p>返回值表示0 表示没有错误 ，若非0表示又错误</p>
-<p>4、编译</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
-
-<br/>
-
-<p><img src="/pic/28e3cdc257072219b60dc93127cf9d78.png" alt="截图"></p>
-<br/>
-
-<p>出现这种错误情况</p>
-<br/>
-
-<br/>
-
-<p>解决方法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim src/os/unix/ngx_user.c</span><br></pre></td></tr></table></figure>
-
-<p>将红色框中的代码注释掉</p>
-<p><img src="/pic/afb44f639073f9979bedb1841e5be631.png" alt="截图"></p>
-<br/>
-
-<p>再次执行make</p>
-<p>还是出现错误</p>
-<p><img src="/pic/6320b447666edaf0b7b2ffb51ea995f7.png" alt="截图"></p>
-<br/>
-
-<p>编辑： vim objs&#x2F;Makefile</p>
-<p>去掉：-werror</p>
-<p>再次执行：make</p>
-<br/>
-
-<p>4、安装软件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p>5、查看端口</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -plant | grep 80</span><br></pre></td></tr></table></figure>
-
-<p>6、启动nginx服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br></pre></td></tr></table></figure>
-
+        
       
 
       
@@ -596,6 +509,8 @@
         <a href="/2022/10/21/hello-world/" class="archive-article-date">
   	<time datetime="2022-10-21T02:58:21.943Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-21</time>
 </a>
+
+
         
       </header>
     
@@ -673,7 +588,20 @@
       	</div>
     </div>
   </div>
+<span id="busuanzi_container_site_pv">    
+    本站总访问量
+    <span id="busuanzi_value_site_pv"></span>次</span> |
+
+<span id="busuanzi_container_site_uv">  
+    本站访客数
+    <span id="busuanzi_value_site_uv"></span>人次</span>
+
 </footer>
+
+<script  async  src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
     </div>
     <script>
 	var yiliaConfig = {

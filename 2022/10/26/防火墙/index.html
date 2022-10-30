@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>防火墙配置 | 雄的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="防火墙配置yum -y install firewall-config &#x2F;&#x2F;安装防火墙图形化管理firewall-config  &#x2F;&#x2F;图形化防火墙管理firewall-cmd –list-all  &#x2F;&#x2F;查看防火墙详细信息firewall-cmd –reload &#x2F;&#x2F;重启防火墙firewall-cmd –add-serv">
+  <meta name="description" content="yum -y install firewall-config &#x2F;&#x2F;安装防火墙图形化管理firewall-config  &#x2F;&#x2F;图形化防火墙管理firewall-cmd –list-all  &#x2F;&#x2F;查看防火墙详细信息firewall-cmd –reload &#x2F;&#x2F;重启防火墙firewall-cmd –add-service&amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="防火墙配置">
 <meta property="og:url" content="http://example.com/2022/10/26/%E9%98%B2%E7%81%AB%E5%A2%99/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="防火墙配置yum -y install firewall-config &#x2F;&#x2F;安装防火墙图形化管理firewall-config  &#x2F;&#x2F;图形化防火墙管理firewall-cmd –list-all  &#x2F;&#x2F;查看防火墙详细信息firewall-cmd –reload &#x2F;&#x2F;重启防火墙firewall-cmd –add-serv">
+<meta property="og:site_name" content="雄的博客">
+<meta property="og:description" content="yum -y install firewall-config &#x2F;&#x2F;安装防火墙图形化管理firewall-config  &#x2F;&#x2F;图形化防火墙管理firewall-cmd –list-all  &#x2F;&#x2F;查看防火墙详细信息firewall-cmd –reload &#x2F;&#x2F;重启防火墙firewall-cmd –add-service&amp;#">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-26T09:46:03.631Z">
-<meta property="article:modified_time" content="2022-10-26T09:48:03.392Z">
+<meta property="article:modified_time" content="2022-10-30T06:51:00.755Z">
 <meta property="article:author" content="LiXiong">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="雄的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -60,6 +60,8 @@
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+	        
+				<li><a href="/archives/index.html">归档</a></li>
 	        
 			</ul>
 		</nav>
@@ -117,6 +119,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -134,12 +138,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -157,9 +163,27 @@
             <article id="post-防火墙" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      防火墙配置
+    </h1>
+  
+
+        
+        <a href="/2022/10/26/%E9%98%B2%E7%81%AB%E5%A2%99/" class="archive-article-date">
+  	<time datetime="2022-10-26T09:46:03.631Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-26</time>
+</a>
+
+
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="防火墙配置"><a href="#防火墙配置" class="headerlink" title="防火墙配置"></a>防火墙配置</h1><p>yum -y install firewall-config &#x2F;&#x2F;安装防火墙图形化管理<br />firewall-config  &#x2F;&#x2F;图形化防火墙管理<br />firewall-cmd –list-all  &#x2F;&#x2F;查看防火墙详细信息<br />firewall-cmd –reload &#x2F;&#x2F;重启防火墙<br />firewall-cmd –add-service&#x3D;http –permanent &#x2F;&#x2F;永久设置（否者开机放行就没了）  设置后需重启防火墙<br /><em>一般不要轻易重启防火墙</em> &#x2F;&#x2F;仅限制于实验环节使用<br />firewall-cmd –remove-service&#x3D;ssh  &#x2F;&#x2F;删除ssh服务放行<br />firewall-cmd –remove-service&#x3D;http –permanent &#x2F;&#x2F;永久删除ssh服务放行</p>
+        <p>yum -y install firewall-config &#x2F;&#x2F;安装防火墙图形化管理<br />firewall-config  &#x2F;&#x2F;图形化防火墙管理<br />firewall-cmd –list-all  &#x2F;&#x2F;查看防火墙详细信息<br />firewall-cmd –reload &#x2F;&#x2F;重启防火墙<br />firewall-cmd –add-service&#x3D;http –permanent &#x2F;&#x2F;永久设置（否者开机放行就没了）  设置后需重启防火墙<br /><em>一般不要轻易重启防火墙</em> &#x2F;&#x2F;仅限制于实验环节使用<br />firewall-cmd –remove-service&#x3D;ssh  &#x2F;&#x2F;删除ssh服务放行<br />firewall-cmd –remove-service&#x3D;http –permanent &#x2F;&#x2F;永久删除ssh服务放行</p>
+<span id="more"></span>
 <p>一般放行防火墙示例<br />firewall-cmd –add-service&#x3D;ssh <br />firewall-cmd –add-service&#x3D;ssh –permanent </p>
 
       
@@ -258,14 +282,14 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          网络配置
         
       </div>
     </a>
   
   
     <a href="/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">基于Red Hat8.5环境下的Apache服务器的安装与配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -315,7 +339,20 @@
       	</div>
     </div>
   </div>
+<span id="busuanzi_container_site_pv">    
+    本站总访问量
+    <span id="busuanzi_value_site_pv"></span>次</span> |
+
+<span id="busuanzi_container_site_uv">  
+    本站访客数
+    <span id="busuanzi_value_site_uv"></span>人次</span>
+
 </footer>
+
+<script  async  src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
     </div>
     <script>
 	var yiliaConfig = {
