@@ -6,21 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>基于Red Hat8.5环境下的Apache服务器的安装与配置 | 雄的博客</title>
+  <title>Archives: 2024/6 | 雄的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1rpm -qa | grep httpd 如图所示表示已经下载了httpd安装包">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于Red Hat8.5环境下的Apache服务器的安装与配置">
-<meta property="og:url" content="http://example.com/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="雄的博客">
+<meta property="og:url" content="http://example.com/archives/2024/06/index.html">
 <meta property="og:site_name" content="雄的博客">
-<meta property="og:description" content="1rpm -qa | grep httpd 如图所示表示已经下载了httpd安装包">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/pic/Apache.png">
-<meta property="article:published_time" content="2022-10-26T09:46:03.625Z">
-<meta property="article:modified_time" content="2022-10-30T06:51:00.773Z">
 <meta property="article:author" content="LiXiong">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/pic/Apache.png">
   
     <link rel="alternative" href="/atom.xml" title="雄的博客" type="application/atom+xml">
   
@@ -162,205 +156,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Apache服务器的安装与配置" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      基于Red Hat8.5环境下的Apache服务器的安装与配置
-    </h1>
-  
-
-        
-        <a href="/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2022-10-26T09:46:03.625Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-10-26</time>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2024" class="archive-year">2024</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2024/06/04/%E7%AC%AC%E4%B8%80%E5%A4%A9/" class="archive-article-date">
+  	<time datetime="2024-06-04T02:28:06.425Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-06-04</time>
 </a>
 
 
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a name="Uezi0"></a></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep httpd</span><br></pre></td></tr></table></figure>
-<p><img src="/pic/Apache.png" alt="image.png"><br />如图所示表示已经下载了httpd安装包</p>
-<span id="more"></span>
-
-<p>若没有下载，则执行一下代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y httpd</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>安装完成后，再用rpm -qa |grep httpd,查看apache是否已安装成功</li>
-<li>然后启动apache，命令用：systemctl start httpd </li>
-<li>设置apache开启自启，命令用：systemctl enable httpd </li>
-<li>查看apache服务是否起来，命令用：systemctl status httpd</li>
-</ul>
-<p><a name="WDXbx"></a></p>
-<h2 id="放行防火墙"><a href="#放行防火墙" class="headerlink" title="放行防火墙"></a>放行防火墙</h2><blockquote>
-<p>防火墙放行http，放行端口</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --<span class="built_in">list</span>-all  <span class="comment">//查看防火墙详细信息</span></span><br><span class="line">firewall-cmd --reload   <span class="comment">//重启防火墙</span></span><br><span class="line">firewall-cmd --add-service=http <span class="comment">//放行http服务</span></span><br><span class="line">firewall-cmd --add-service=http --permanent <span class="comment">//永久放行http服务放行</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-</blockquote>
-<p><a name="mJjep"></a></p>
-<h2 id="更改端口"><a href="#更改端口" class="headerlink" title="更改端口"></a>更改端口</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/httpd/conf/httpd.conf   <span class="comment">//编辑配置文件</span></span><br><span class="line">Listen <span class="number">80</span> --&gt; Listen <span class="number">82</span>  <span class="comment">//将80端口改到82</span></span><br><span class="line">systemctl restart httpd  <span class="comment">//重启HTTPD服务器</span></span><br></pre></td></tr></table></figure>
-
-<p><a name="e2VrZ"></a></p>
-<h2 id="更改文件存储路径"><a href="#更改文件存储路径" class="headerlink" title="更改文件存储路径"></a>更改文件存储路径</h2><p>更改路径 ： &#x2F;etc&#x2F;httpd&#x2F;conf&#x2F;httpd.conf</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">更改：</span><br><span class="line">DocumentRoot <span class="string">&quot;/var/www/html&quot;</span> --&gt;  DocumentRoot <span class="string">&quot;/web&quot;</span>  <span class="comment">//更改文件存储路径为/web</span></span><br><span class="line">Directory <span class="string">&quot;/var/www/html&quot;</span>  --&gt; Directory <span class="string">&quot;/web&quot;</span></span><br><span class="line">更改后需重启http服务</span><br></pre></td></tr></table></figure>
-
-
-
-<p><a name="nQvUD"></a></p>
-<h2 id="更改对应的标签"><a href="#更改对应的标签" class="headerlink" title="更改对应的标签"></a>更改对应的标签</h2><p> http对应的标签是httpd_sys_content_t<br />lg：  每个文件和文件类型只对应唯一的标签   监控端口<br />ls -Z   &#x2F;&#x2F;查看标签<br />ls -ldZ &#x2F;&#x2F;查看文件夹标签</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">semanage fcontext -a -t <span class="type">httpd_sys_content_t</span> index2.html   <span class="comment">//更改标签  -a 是添加 -t 是添加标签</span></span><br><span class="line">restorecon -Rv <span class="comment">//刷新所有文件</span></span><br><span class="line">restorecon -Rv index2.html <span class="comment">//刷新index2.html文件</span></span><br><span class="line">semanage fcontext -m -t <span class="type">httpd_sys_content_t</span> index2.html   <span class="comment">//更改标签 -m 是modify 的意思</span></span><br><span class="line">semanage fcontext -a -t <span class="type">httpd_sys_content_t</span> <span class="string">&#x27;/web(/.*)?&#x27;</span> <span class="comment">//对文件下的所有文件更改标签    更改文件夹的标签，以防刷新是被文件夹标签干扰</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<p><a name="ZOmbV"></a></p>
-<h2 id="放行SELinux监控端口"><a href="#放行SELinux监控端口" class="headerlink" title="放行SELinux监控端口"></a>放行SELinux监控端口</h2><p>SELinux配置文件： &#x2F;etc&#x2F;selinux&#x2F;config<br />SELinux中的配置选项：<br />	enforcing &#x2F;&#x2F;工作，开启<br />	permissive &#x2F;&#x2F;警告但放行<br />	disabled &#x2F;&#x2F;完全放行</p>
-<p>getenforce &#x2F;&#x2F;查看SELinux防火墙状态<br />setenforce 0 &#x2F;&#x2F;设置防火墙状态为0（临时关掉）不需要重启selinux<br />setenforce 1 &#x2F;&#x2F;开启防火墙</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">semanage port -l | grep http  <span class="comment">//过滤http</span></span><br><span class="line">semanage port -a -t <span class="type">http_port_t</span> -p tcp <span class="number">82</span> <span class="comment">//不需要刷新和重启  还需放行防火墙</span></span><br><span class="line">firewall-cmd --add-port=<span class="number">82</span>/tcp <span class="comment">//放行TCP的82端口</span></span><br><span class="line">firewall-cmd --add-port=<span class="number">82</span>/tcp --permanent <span class="comment">//永久放行tcpd82端口</span></span><br><span class="line">systemctl restart httpd <span class="comment">//重启httpd服务</span></span><br></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/10/26/Apache%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2022/10/26/%E9%98%B2%E7%81%AB%E5%A2%99/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          防火墙配置
-        
-      </div>
-    </a>
   
   
-    <a href="/2022/10/26/MySQL%E5%9C%A8Linux%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%83%A8%E7%BD%B2%EF%BC%888.0.29%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MySQL官网下载</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -396,8 +230,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
